@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Trash2, Phone, Stethoscope, FileText, Send, MessageCircle, XCircle } from "lucide-react";
+import { Trash2, Phone, Stethoscope, FileText, Send, MessageCircle, XCircle, User, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast, Toaster } from "react-hot-toast";
 
@@ -479,7 +479,3 @@ export default function DoctorPage() {
     </div>
   );
 }
-
-// Helper Icon for Stat Cards
-const UserIcon = ({size}: {size: number}) => <User size={size} />;
-import { User, Mail } from "lucide-react";

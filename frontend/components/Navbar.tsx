@@ -1,11 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { User, LogOut, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
-  const router = useRouter();
   const [user, setUser] = useState<{ name: string; email: string; role: string } | null>(null);
   const [showProfile, setShowProfile] = useState(false);
 
