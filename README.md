@@ -5,7 +5,13 @@
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-blue?style=for-the-badge&logo=tailwind-css)
 ![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite)
 
-**NoQ** is a modern, web-based digital queue management system designed to eliminate chaos in hospital waiting rooms. It empowers patients to book appointments from home and track their status in real-time, while giving doctors a powerful dashboard to manage patient floww efficiently.
+**NoQ** is a modern, web-based digital queue management system designed to eliminate chaos in hospital waiting rooms. It empowers patients to book appointments from home and track their status in real-time, while giving doctors a powerful dashboard to manage patient flow efficiently.
+
+---
+
+### 🌐 Live Deployment
+- **Frontend**: [https://noqcaretrio.vercel.app/](https://noqcaretrio-git-main-devansh-singhs-projects-8c182ff5.vercel.app/)
+- **Backend API**: [https://noq-caretrio-backend.onrender.com](https://noq-caretrio-backend.onrender.com)
 
 ---
 
