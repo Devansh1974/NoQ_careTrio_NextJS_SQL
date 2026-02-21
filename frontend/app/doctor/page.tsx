@@ -479,3 +479,6 @@ export default function DoctorPage() {
     </div>
   );
 }
+
+// Helper Icon for Stat Cards
+const UserIcon = ({ size }: { size: number }) => <User size={size} />;
