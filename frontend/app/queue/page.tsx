@@ -20,7 +20,7 @@ export default function QueuePage() {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const res = await fetch("http://localhost:5000/queue-status");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/queue-status`);
         if (res.ok) {
           const data = await res.json();
           setStatus(data);

@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { z } = require("zod");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 // CONFIG
 // =========================
 const JWT_SECRET = process.env.JWT_SECRET || "noq_super_secret";
+const PORT = process.env.PORT || 5000;
 
 // =========================
 // EMAIL CONFIG (NODEMAILER)
@@ -425,6 +427,6 @@ app.get("/admin/today-patients", authenticateDoctor, (req, res) => {
 // =========================
 // SERVER START
 // =========================
-app.listen(5000, () => {
-  console.log("🚀 Backend running on http://localhost:5000");
+app.listen(PORT, () => {
+  console.log(`🚀 Backend running on http://localhost:${PORT}`);
 });

@@ -52,7 +52,7 @@ export default function DoctorPage() {
   const fetchQueue = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/doctor/waiting-patients", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/doctor/waiting-patients`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) setWaitingPatients(await res.json());
@@ -64,7 +64,7 @@ export default function DoctorPage() {
   const fetchActivePatient = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/doctor/active-patient", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/doctor/active-patient`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -77,7 +77,7 @@ export default function DoctorPage() {
   const fetchTreatedPatients = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/admin/today-patients", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/today-patients`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) setTreatedPatients(await res.json());
@@ -90,7 +90,7 @@ export default function DoctorPage() {
     setLoading(true);
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/next", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/next`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -127,7 +127,7 @@ export default function DoctorPage() {
     const finalRemarks = status === "skipped" ? "Patient skipped" : remarks;
 
     try {
-      const res = await fetch("http://localhost:5000/consult", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/consult`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -167,7 +167,7 @@ export default function DoctorPage() {
     
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch(`http://localhost:5000/patients/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/patients/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -201,7 +201,7 @@ export default function DoctorPage() {
     const msg = `Diagnosis: ${disease}\nMedicines: ${medicine}\nRemarks: ${remarks}`;
 
     try {
-      const res = await fetch("http://localhost:5000/notify", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/notify`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
